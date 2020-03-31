@@ -1,0 +1,59 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<title>Recipe Directory</title>
+</head>
+
+<body>
+
+<div class="container">
+
+	<h3>Recipe Directory</h3>
+	<hr>
+	
+	<!-- Add a button -->
+	<a th:href="@{/recipes/showFormForAdd}"
+		class="btn btn-primary btn-sm mb-3">
+		Add Recipe
+	</a>
+	
+	
+	<table class="table table-bordered table-striped">
+		<thead class="thead-dark">
+			<tr>
+				<th>Title</th>
+				<th>Category</th>
+				<th>ShortDescription</th>
+				<th>Cooking time</th>
+				<th>UsedProducts</th>
+				<th>Picture</th>
+			</tr>
+		</thead>
+		
+		<tbody>
+			<tr th:each="tempRecipe : ${recipes}">
+			
+				<td th:text="${tempRecipe.title}" />	
+				<td th:text="${tempRecipe.category}" />	
+				<td th:text="${tempRecipe.shortDescription}" />	
+				<td th:text="${tempRecipe.cooking time}" />
+				<td th:text="${tempRecipe.usedPtoducts}" />
+				<td th:text="${tempRecipe.Picture}" />
+				
+				
+			</tr>
+		</tbody>		
+	</table>
+	
+</div>
+	
+</body>
+</html>
+

@@ -1,0 +1,21 @@
+
+ 
+ <div class="row"> 
+     <form style="width:400px; height:500px; margin-left:40px;" class="col s12" id="registerForm" action="login" method="post"> 
+       <h3 style="color:white; margin-bottom:20px">Login: </h3> 
+       <div th:if="${error} != null" th:text="${error}" style="color: rgba(255, 0 , 0, 0.5)"></div> 
+       <div class="row"> 
+         <div class="input-field col s12"> 
+           <input name="username" id="username" type="text"> 
+           <label for="username">Username</label> 
+         </div> 
+       </div> 
+       <div class="row"> 
+         <div class="input-field col s12"> 
+           <input  name="password" id="password" type="password"> 
+           <label for="password">Password</label> 
+         </div> 
+       </div> 
+       <button class="btn waves-effect waves-tomato" id="registerButton" type="submit">LogIn</button> 
+     </form>	 
+   </div> 

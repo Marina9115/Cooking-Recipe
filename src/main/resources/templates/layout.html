@@ -1,0 +1,21 @@
+ <!DOCTYPE html> 
+ <html xmlns="http://www.w3.org/1999/xhtml" 
+ 	xmlns:th="http://www.thymeleaf.org" 
+ 	xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4"> 
+ 
+ 
+ 
+ 
+<body 	style="background:white;"> 
+ 
+  <head th:include="fragments/head" th:with="pageTitle='Cooking Recipes'"></head> 
+ 	<header th:include="fragments/header"></header> 
+ 	<main style="min-height:90vh;" th:include="${view}">
+ 	<h1> REGISTER SUCCESSFULL</h1>
+ 	</main> 
+ 	<footer style="botom: 0; position: absolute; width: 100%;" 
+ 		th:include="fragments/footer"></footer> 
+ 	<span th:include="fragments/scripts"></span> 
+ </body> 
+ </html> 
+

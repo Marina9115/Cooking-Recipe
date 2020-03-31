@@ -1,0 +1,20 @@
+<table style="width:70%; margin:auto" class="responsive-table highlight"> 
+    <thead> 
+     <tr> 
+         <th>UserName</th> 
+         <th>Email</th> 
+         <th>Name</th> 
+        <th>Status</th> 
+     </tr> 
+     </thead> 
+ 
+ 
+     <tbody> 
+     <tr class="justForALittleBit" th:each="user:${allUsers}"> 
+         <td th:text="${user.username}"></td> 
+         <td th:text="${user.email}"></td> 
+         <td><span th:text="${user.firstName}"></span> <span th:text="${user.firstName}"></span></td> 
+         <td th:text="${user.status}"></td> 
+     </tr> 
+     </tbody> 
+ </table> 

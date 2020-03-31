@@ -1,0 +1,51 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<title>Category Directory</title>
+</head>
+
+<body>
+
+<div class="container">
+
+	<h3>Category Directory</h3>
+	<hr>
+	
+	<!-- Add a button -->
+	<a th:href="@{/categories/showFormForAdd}"
+		class="btn btn-primary btn-sm mb-3">
+		Add Category
+	</a>
+	
+	
+	<table class="table table-bordered table-striped">
+		<thead class="thead-dark">
+			<tr>
+				<th>Name</th>
+				<th>Description</th>
+				
+			</tr>
+		</thead>
+		
+		<tbody>
+			<tr th:each="tempCategory : ${categories}">
+			
+				<td th:text="${tempCategory.name}" />	
+				<td th:text="${tempCategory.description}" />	
+				
+			</tr>
+		</tbody>		
+	</table>
+	
+</div>
+	
+</body>
+</html>
+

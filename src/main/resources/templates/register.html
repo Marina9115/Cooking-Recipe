@@ -1,0 +1,40 @@
+ <div class="row"> 
+     <form style="width:400px; height:500px; margin-top:20px; margin-left:40px;" class="col s12" id="registerForm" th:object="${user}" th:action="@{/register}" method="post"> 
+       <div class="row"> 
+         <div class="input-field col s6"> 
+           <i class="material-icons prefix">mode_edit</i> 
+           <input name="firstName" id="firstName" type="text" class="validate" required pattern="[a-zA-Z]{2,15}"	> 
+           <label for="firstName">First Name</label> 
+         </div> 
+         <div class="input-field col s6"> 
+           <i class="material-icons prefix">mode_edit</i> 
+           <input  name="lastName" id="lastName" type="text" class="validate" required pattern="[a-zA-Z]{2,15}"> 
+           <label for="lastName">Last Name</label> 
+         </div> 
+       </div> 
+       <div class="row"> 
+         <div class="input-field col s12"> 
+           <i class="material-icons prefix">mode_edit</i> 
+           <input name="username" id="username" type="text" class="validate" required pattern="[a-zA-Z]{2,15}"> 
+           <label for="username">Username</label> 
+         </div> 
+       </div> 
+       <div class="row"> 
+         <div class="input-field col s12"> 
+           <i class="material-icons prefix">mode_edit</i> 
+           <input  name="password" id="password" type="password" class="validate" required 
+           	pattern="^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&.,])[A-Za-z\d@$!%*#?&.,]{8,15}$"> 
+           <label for="password">Password</label> 
+         </div> 
+       </div> 
+       <div class="row"> 
+         <div class="input-field col s12"> 
+           <i class="material-icons prefix">email</i> 
+           <input name="email" id="email" type="email" class="validate" required> 
+           <label for="email">Email</label> 
+         </div> 
+       </div> 
+       <button class="btn waves-effect waves-tomato" id="registerButton" type="submit">Register</button> 
+     </form>	 
+   </div> 
+ 

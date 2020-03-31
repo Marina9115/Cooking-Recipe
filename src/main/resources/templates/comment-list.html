@@ -1,0 +1,52 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<title>Comment Directory</title>
+</head>
+
+<body>
+
+<div class="container">
+
+	<h3>Comment Directory</h3>
+	<hr>
+	
+	<!-- Add a button -->
+	<a th:href="@{/comments/showFormForAdd}"
+		class="btn btn-primary btn-sm mb-3">
+		Add Comment
+	</a>
+	
+	
+	<table class="table table-bordered table-striped">
+		<thead class="thead-dark">
+			<tr>
+				<th>Text</th>
+				<th>Author</th>
+				<th>Recipe</th>
+			</tr>
+		</thead>
+		
+		<tbody>
+			<tr th:each="tempComment : ${comments}">
+			
+				<td th:text="${tempComment.text}" />	
+				<td th:text="${tempComment.author}" />	
+				<td th:text="${tempComment.recipe}" />	
+				
+			</tr>
+		</tbody>		
+	</table>
+	
+</div>
+	
+</body>
+</html>
+

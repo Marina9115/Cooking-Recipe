@@ -1,0 +1,27 @@
+  <nav> 
+ 	<div class="nav-wrapper red darken-4"> 
+ 		<a style="color: red;" href="/" class="brand-logo center"></a> 
+ 		<a href="#" data-target="sidenav_links" class="sidenav-trigger"> <i 
+ 			class="material-icons">menu</i> 
+ 		</a> 
+		<ul class="right hide-on-med-and-down" id="nav-mobile"> 
+			<li><a sec:authorize="isAnonymous()" href="/login">LogIn</a></li> 
+			<li><a sec:authorize="isAnonymous()" href="/register">Register</a></li> 
+ 			<li><a sec:authorize="hasRole('Administrator')" href="/admin/menu">Recipes</a></li> 
+ 			<li><a sec:authorize="isAuthenticated()" href="/logout">LogOut</a></li> 
+ 
+ 
+ 		</ul> 
+ 		<p>Welcome to Cooking Recipes</p>
+ 	</div> 
+ </nav> 
+ 
+ 
+ <ul class="sidenav red darken-2 grey-li" id="sidenav_links"> 
+ 	<li><a class="white-text text-lighten-2" sec:authorize="isAnonymous()" href="/login">LogIn</a></li> 
+ 	<li><a class="white-text text-lighten-2" sec:authorize="isAnonymous()" href="/register">Register</a></li> 
+ 	<li><a class="white-text text-lighten-2" sec:authorize="hasRole('Administrator')" href="/recipes/">Recipes</a></li> 
+ 	<li><a class="white-text text-lighten-2" sec:authorize="isAuthenticated()" href="/logout">LogOut</a></li> 
+ </ul> 
+ 
+ 
